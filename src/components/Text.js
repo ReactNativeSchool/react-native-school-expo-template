@@ -6,6 +6,7 @@ import colors from '../constants/colors';
 const styles = StyleSheet.create({
   text: {
     color: colors.primary,
+    fontSize: 16,
   },
   headerText: {
     fontWeight: '600',
