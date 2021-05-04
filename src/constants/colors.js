@@ -5,5 +5,4 @@ export default {
   gray: '#9ca5ab',
   background: '#eef0f3',
   error: '#b55464',
-  // success: '#50c356',
 };
