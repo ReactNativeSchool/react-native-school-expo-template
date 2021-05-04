@@ -1,4 +1,5 @@
 import React from 'react';
+import { Alert } from 'react-native';
 
 export const useLogin = () => {
   const [email, setEmail] = React.useState('');
@@ -19,7 +20,7 @@ export const useLogin = () => {
       return null;
     }
 
-    alert(`Success! \n Email: ${email} \n Password: ${password}`);
+    Alert.alert('Success!', `Email: ${email} \n Password: ${password}`);
     return null;
   };
 

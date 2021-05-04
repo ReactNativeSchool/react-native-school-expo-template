@@ -30,6 +30,7 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@testing-library/jest-native": "^4.0.1",
+    "@testing-library/react-hooks": "^5.1.2",
     "@testing-library/react-native": "^7.2.0",
     "eslint": "^7.24.0",
     "eslint-config-handlebarlabs": "^0.0.6",

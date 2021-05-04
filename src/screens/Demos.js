@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Alert } from 'react-native';
 
 import colors from '../constants/colors';
 import { Text } from '../components/Text';
@@ -53,12 +53,12 @@ export const FormDemo = () => {
 
 export const ButtonDemo = () => (
   <View style={styles.container}>
-    <Button onPress={() => alert('you pressed the default button')}>
+    <Button onPress={() => Alert.alert('you pressed the default button')}>
       Default Button
     </Button>
     <Button
       type="outline"
-      onPress={() => alert('you pressed the outline button')}
+      onPress={() => Alert.alert('you pressed the outline button')}
     >
       Outline Button
     </Button>
