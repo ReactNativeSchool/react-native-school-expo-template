@@ -5,6 +5,7 @@ import colors from '../constants/colors';
 import { Text } from '../components/Text';
 import { Button } from '../components/Button';
 import { TextInput } from '../components/Form';
+import { useLogin } from '../util/auth';
 
 const styles = StyleSheet.create({
   container: {
@@ -23,27 +24,7 @@ export const TextDemo = () => (
 );
 
 export const FormDemo = () => {
-  const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
-  const [errors, setErrors] = React.useState({});
-
-  const submit = () => {
-    const nextErrors = {};
-    if (email.length === 0) {
-      nextErrors.email = 'This field is required.';
-    }
-    if (password.length === 0) {
-      nextErrors.password = 'This field is required.';
-    }
-    setErrors(nextErrors);
-
-    if (Object.keys(nextErrors).length > 0) {
-      return null;
-    }
-
-    alert(`Success! \n Email: ${email} \n Password: ${password}`);
-    return null;
-  };
+  const { submit, errors, email, setEmail, password, setPassword } = useLogin();
 
   return (
     <View style={styles.container}>
