@@ -40,7 +40,6 @@
     "prettier": "^2.2.1",
     "react-test-renderer": "^17.0.2"
   },
-  "private": true,
   "jest": {
     "preset": "jest-expo",
     "transformIgnorePatterns": [
@@ -49,5 +48,27 @@
     "setupFilesAfterEnv": [
       "@testing-library/jest-native/extend-expect"
     ]
-  }
+  },
+  "description": "A simple Expo template with navigation, testing, and linting setup.",
+  "keywords": [
+    "expo",
+    "template",
+    "expo-template",
+    "react-native-school",
+    "react-native",
+    "react-native-template",
+    "jest",
+    "eslint",
+    "prettier"
+  ],
+  "homepage": "https://github.com/ReactNativeSchool/react-native-school-expo-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ReactNativeSchool/react-native-school-expo-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ReactNativeSchool/react-native-school-expo-template/issues"
+  },
+  "author": "Spencer Carli",
+  "license": "MIT"
 }
