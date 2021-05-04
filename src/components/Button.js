@@ -28,15 +28,11 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Button = ({
-  onPress = () => {},
-  children = '',
-  outline = false,
-}) => {
+export const Button = ({ onPress = () => {}, children = '', type }) => {
   const containerStyles = [styles.container];
   const textStyles = [styles.text];
 
-  if (outline) {
+  if (type === 'outline') {
     containerStyles.push(styles.containerOutline);
     textStyles.push(styles.textOutline);
   }

@@ -56,7 +56,10 @@ export const ButtonDemo = () => (
     <Button onPress={() => alert('you pressed the default button')}>
       Default Button
     </Button>
-    <Button outline onPress={() => alert('you pressed the outline button')}>
+    <Button
+      type="outline"
+      onPress={() => alert('you pressed the outline button')}
+    >
       Outline Button
     </Button>
   </View>
