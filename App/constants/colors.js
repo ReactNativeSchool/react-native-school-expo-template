@@ -3,6 +3,7 @@ export default {
   border: '#c6c6c6',
   white: '#fff',
   gray: '#9ca5ab',
-  // error: '#b55464',
+  background: '#eef0f3',
+  error: '#b55464',
   // success: '#50c356',
 };

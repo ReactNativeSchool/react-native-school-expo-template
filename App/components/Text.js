@@ -4,8 +4,10 @@ import { StyleSheet, Text as RNText } from 'react-native';
 import colors from '../constants/colors';
 
 const styles = StyleSheet.create({
-  headerText: {
+  text: {
     color: colors.primary,
+  },
+  headerText: {
     fontWeight: '600',
     fontSize: 32,
     marginBottom: 12,
@@ -19,7 +21,7 @@ const styles = StyleSheet.create({
 });
 
 export const Text = ({ type, children, style = {} }) => {
-  const textStyles = [];
+  let textStyles = [styles.text];
 
   if (type === 'header') {
     textStyles.push(styles.headerText);
@@ -27,8 +29,11 @@ export const Text = ({ type, children, style = {} }) => {
     textStyles.push(styles.subHeaderText);
   }
 
-  // TODO: Support object or array
-  textStyles.push(style);
+  if (Array.isArray(style)) {
+    textStyles = [...textStyles, ...style];
+  } else {
+    textStyles.push(style);
+  }
 
   return <RNText style={textStyles}>{children}</RNText>;
 };

@@ -22,12 +22,28 @@ const styles = StyleSheet.create({
     height: 1,
     backgroundColor: colors.border,
   },
+  borderError: {
+    backgroundColor: colors.error,
+  },
+  errorText: {
+    marginTop: 5,
+    color: colors.error,
+  },
 });
 
-export const TextInput = ({ label, messageType, ...rest }) => (
-  <View style={styles.inputContainer}>
-    <Text style={styles.labelText}>{label}</Text>
-    <RNTextInput style={styles.textInput} {...rest} />
-    <View style={styles.border} />
-  </View>
-);
+export const TextInput = ({ label, errorText, ...rest }) => {
+  const borderStyles = [styles.border];
+
+  if (errorText && errorText.length > 0) {
+    borderStyles.push(styles.borderError);
+  }
+
+  return (
+    <View style={styles.inputContainer}>
+      <Text style={styles.labelText}>{label}</Text>
+      <RNTextInput style={styles.textInput} {...rest} />
+      <View style={borderStyles} />
+      <Text style={styles.errorText}>{errorText}</Text>
+    </View>
+  );
+};
