@@ -15,7 +15,7 @@ It's easy to create a project, strip out the few components included, and still 
 > Be sure to have the [Expo CLI](https://docs.expo.io/workflow/expo-cli/) installed.
 
 ```bash
-expo init --template react-native-school-expo-template
+expo init --template @react-native-school/expo-template
 ```
 
 - Run on iOS: `yarn ios` or `npm run ios`
