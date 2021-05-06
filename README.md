@@ -24,3 +24,17 @@ expo init --template @react-native-school/expo-template
 - Run Tests: `yarn test` or `npm run test`
 - Lint Code: `yarn lint` or `npm run lint`
 - Format Code: `yarn format` or `npm run format`
+
+## Screenshots
+
+List Screen
+![List Screen](./assets/screenshots/list.png)
+
+Text Screen
+![Text Screen](./assets/screenshots/text.png)
+
+Form Screen
+![Form Screen](./assets/screenshots/form.png)
+
+Button Screen
+![Button Screen](./assets/screenshots/button.png)
