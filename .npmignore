@@ -1,0 +1,5 @@
+.expo
+.npmignore
+.vscode
+yarn.lock
+package-lock.json
